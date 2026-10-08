@@ -1,0 +1,156 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    color: #f8eee4;
+    background: #211713;
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 700;
+}
+
+h2,
+h3 {
+    color: #ffd19a;
+}
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem clamp(1.5rem, 6vw, 6rem);
+    color: white;
+    background:
+        linear-gradient(90deg, rgba(20, 12, 8, 0.78), rgba(20, 12, 8, 0.18)),
+        url("https://irp.cdn-website.com/c4323a5f/dms3rep/multi/opt/bayport-interior2-640w.jpg") center 55% / cover no-repeat;
+}
+
+.hero-copy {
+    margin: auto 0;
+    max-width: 900px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+    text-shadow: 2px 3px 0 rgba(20, 12, 8, 0.35);
+}
+
+.hero-copy p {
+    margin: 1.25rem 0 0;
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+a {
+    transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+    color: lightskyblue;
+}
+
+main,
+footer {
+    padding: 2rem clamp(1.5rem, 6vw, 6rem);
+    background: linear-gradient(135deg, #211713, #38241b);
+}
+
+main.page-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(180px, 280px);
+    align-items: start;
+    gap: clamp(2rem, 5vw, 5rem);
+}
+
+.page-content {
+    min-width: 0;
+}
+
+.pizza-man {
+    position: sticky;
+    top: 1.5rem;
+    margin: 1rem auto;
+}
+
+.pizza-man img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+main a,
+footer a {
+    color: #ffd19a;
+}
+
+.menu-items {
+    max-width: 32rem;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-items li {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(248, 238, 228, 0.2);
+}
+
+.menu-items .price {
+    white-space: nowrap;
+    color: #ffd19a;
+}
+
+#about img {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    main.page-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .pizza-man {
+        position: static;
+        width: min(220px, 70%);
+        margin: 0 auto;
+    }
+}
